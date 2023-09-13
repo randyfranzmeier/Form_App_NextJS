@@ -10,13 +10,15 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children, confirmation, formdata
 }: {
   children: React.ReactNode
+  confirmation: React.ReactNode
+  formdata: React.ReactNode
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}{confirmation}{formdata}</body>
     </html>
   )
 }
