@@ -1,4 +1,17 @@
+import  UserForm as toastModal  from '../@modal/(.)login/UserForm'
 export default function UserForm() {
+ let isVal: boolean
+    let validateData = (email: string, password: string) =>{
+        if (email == null || email == '' || password == null || password == '') {
+            isVal = false
+        }
+        isVal = true
+    }
+
+    let valid = () =>{
+        return isVal
+    }
+    
     return (
         <div>
             <form className="text-3xl font-bold rounded-md flex:auto justify-center items-center rounded bg-black">
@@ -8,6 +21,7 @@ export default function UserForm() {
                 <label className="text-white">Password:</label>
                 <input id="password" name="password" type="text" className="w-48 mr-1"></input> <br></br> <br></br>
                 <button id="submit" type="submit" className="rounded-md hover:rounded-lg bg-red-700">Sign in</button>
+                {/* onSubmit={ validateData(document.getElementById('Email':string).value, document.getElementById('password':string).value)}>Sign in</button> */}
 
             </form>
         </div>

@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+//import { valid } from '../components/@login'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -10,15 +11,32 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children, confirmation, formdata
+  children, modal, login
 }: {
   children: React.ReactNode
-  confirmation: React.ReactNode
-  formdata: React.ReactNode
+  modal: React.ReactNode
+  login: React.ReactNode
 }) {
+  // const loginSegments = useSelectedLayoutSegment('auth')
   return (
+    // const loginSuccessfull = valid()
+    // return loginSuccessfull ? toast: login
     <html lang="en">
-      <body className={inter.className}>{children}{confirmation}{formdata}</body>
+      <body className={inter.className}>
+        <div>
+        {login}
+        </div>
+        <div>
+        {modal}
+        </div>
+        <div>
+        {children}
+        </div>
+      </body>
     </html>
   )
 }
+// function useSelectedLayoutSegment(arg0: string) {
+//   throw new Error('Function not implemented.')
+// }
+
