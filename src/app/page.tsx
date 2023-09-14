@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import UserForm from './login/UserForm'
+import UserForm from './components/page'
 import { useRouter } from 'next/navigation'
 import React from 'react'
 

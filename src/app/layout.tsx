@@ -11,11 +11,10 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children, modal, login
+  children, toast
 }: {
   children: React.ReactNode
-  modal: React.ReactNode
-  login: React.ReactNode
+  toast: React.ReactNode
 }) {
   // const loginSegments = useSelectedLayoutSegment('auth')
   return (
@@ -23,15 +22,8 @@ export default function RootLayout({
     // return loginSuccessfull ? toast: login
     <html lang="en">
       <body className={inter.className}>
-        <div>
-        {login}
-        </div>
-        <div>
-        {modal}
-        </div>
-        <div>
         {children}
-        </div>
+        {toast}
       </body>
     </html>
   )

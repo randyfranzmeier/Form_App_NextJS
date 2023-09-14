@@ -1,4 +1,4 @@
-import  Toast  from '../toast/Toast'
+import  Toast  from '../@toast/page'
 export default function UserForm() {
  let isVal: boolean
     let validateData = (email: string, password: string) =>{
@@ -12,9 +12,9 @@ export default function UserForm() {
         return isVal
     }
 
-    function callToast() {
-        <Toast Email="myName@example.com" Password="12345"></Toast>
-    }
+    // function callToast() {
+    //     <Toast Email="myName@example.com" Password="12345"></Toast>
+    // }
     
     return (
         <div>
