@@ -1,4 +1,4 @@
-export default function UserForm(props: any) {
+export default function Toast(props: any) {
     return (
         <div>
             <h1>Congratulations, you successfully logged in!</h1>
